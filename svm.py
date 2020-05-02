@@ -23,7 +23,7 @@ x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(x, y
 
 classes = ['malignant' 'benign']
 
-clf =svm.SVC(kernel="linear")
+clf =svm.SVC(kernel="linear", c=2)
 clf.fit(x_train, y_train)
 
 y_predict = clf.predict(x_test)
